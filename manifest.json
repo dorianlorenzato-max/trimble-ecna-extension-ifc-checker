@@ -1,8 +1,7 @@
 {
-  "icon": "https://github.com/dorianlorenzato-max/trimble-ecna-extension-ifc-checker/blob/main/bim_team.png",
-  "title": "ECNA_IFC Checker",
-  "url": "https://github.com/dorianlorenzato-max/trimble-ecna-extension-ifc-checker/app/index.html",
-  "description": "Trimble Connect IFC content validation extension",
+  "title": "ECNA IFC Checker",
+  "description": "Extension pour la validation du contenu des IFC sur Trimble Connect.",
+  "icon": "https://dorianlorenzato-max.github.io/trimble-ecna-extension-ifc-checker/bim_team.png",
+  "url": "https://dorianlorenzato-max.github.io/trimble-ecna-extension-ifc-checker/app/index.html",
   "enabled": true
 }
-
