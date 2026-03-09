@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Extension Trimble - ECNA IFC Checker</title>
+    <script src="https://components.connect.trimble.com/trimble-connect-workspace-api/index.js"></script>
+    <script src="../vendor/web-ifc/web-ifc-api-iife.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="page-header">
+        <h1 class="page-title">ECNA IFC Checker</h1>
+        <p class="page-subtitle">
+          Sélectionnez un modèle IFC, lancez les vérifications et exportez les
+          résultats.
+        </p>
+      </header>
+
+      <section class="status-panel" aria-label="Loading status">
+        <div
+          id="status"
+          class="status status-info"
+          role="status"
+          aria-live="polite"
+        >
+          Initialisation de l'extension...
+        </div>
+      </section>
+
+      <details id="file-browser-section" class="file-browser-section" open>
+        <summary class="file-browser-summary">
+          Parcourir les fichiers et sélectionner un modèle
+        </summary>
+        <div class="file-browser-content">
+          <section class="project-panel" aria-label="Project details">
+            <div class="project-row">
+              <span class="project-label">Nom du projet :</span>
+              <strong id="project-name">-</strong>
+            </div>
+            <div class="project-row">
+              <span class="project-label">ID du projet :</span>
+              <strong id="project-id">-</strong>
+            </div>
+            <div class="project-row">
+              <span class="project-label">Nombre de fichiers :</span>
+              <strong id="file-count">0</strong>
+            </div>
+            <button id="refresh-button" type="button" class="refresh-button">
+              Rafraîchir la liste
+            </button>
+          </section>
+
+          <section class="table-panel" aria-label="Project file names">
+            <table class="file-table">
+              <thead>
+                <tr>
+                  <th scope="col" class="select-column">Sélection</th>
+                  <th scope="col" class="index-column">#</th>
+                  <th scope="col">Nom du fichier</th>
+                  <th scope="col">ID Fichier</th>
+                  <th scope="col">ID Dossier</th>
+                  <th scope="col">ID Version</th>
+                </tr>
+              </thead>
+              <tbody id="file-table-body"></tbody>
+            </table>
+          </section>
+
+          <section class="download-panel" aria-label="Selected IFC download">
+            <div id="selected-file-summary" class="selected-file-summary">
+              Aucun fichier IFC sélectionné.
+            </div>
+            <button
+              id="download-selected-button"
+              type="button"
+              class="refresh-button"
+              disabled
+            >
+              Lancer les vérifications sur le fichier
+            </button>
+          </section>
+        </div>
+      </details>
+
+      <section class="checker-panel" aria-label="Checker report">
+        <div class="checker-header-row">
+          <h2 class="checker-title">Rapport de vérification</h2>
+          <div class="checker-actions">
+            <button
+              id="edit-check-settings-button"
+              type="button"
+              class="secondary-action-button"
+              disabled
+            >
+              Modifier les options
+            </button>
+            <button
+              id="clear-model-button"
+              type="button"
+              class="secondary-action-button"
+              disabled
+            >
+              Changer de modèle
+            </button>
+            <button
+              id="download-report-button"
+              type="button"
+              class="secondary-action-button"
+              disabled
+            >
+              Exporter le rapport (JSON)
+            </button>
+            <button
+              id="export-bcf-draft-button"
+              type="button"
+              class="secondary-action-button"
+              disabled
+            >
+              Créer les BCF
+            </button>
+          </div>
+        </div>
+        <div id="report-summary" class="report-summary"></div>
+        <div id="report-list" class="report-list"></div>
+      </section>
+    </main>
+
+    <!-- Modals -->
+    <div id="check-selection-modal" class="check-selection-modal" hidden>
+      <!-- Contenu de la modale des options -->
+    </div>
+    <div id="bcf-create-modal" class="bcf-create-modal" hidden>
+      <!-- Contenu de la modale de création BCF -->
+    </div>
+
+    <script type="module" src="projectFileIndex.js"></script>
+  </body>
+</html>
