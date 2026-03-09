@@ -1,7 +1,7 @@
 {
-  "icon": "https://www.tietomallintaja.fi/wp-content/uploads/2022/03/LOGO-Tekstilla-Musta-200-x-200.png",
+  "icon": "https://github.com/dorianlorenzato-max/trimble-ecna-extension-ifc-checker/blob/main/bim_team.png",
   "title": "ECNA_IFC Checker",
-  "url": "https://markus-t-mattila.github.io/trimble-lab/index.html",
+  "url": "https://github.com/dorianlorenzato-max/trimble-ecna-extension-ifc-checker/app/index.html",
   "description": "Trimble Connect IFC content validation extension",
-  "enabled": true
+  "enabled": false
 }
