@@ -24,7 +24,7 @@ const IFC_FILE_DOWNLOADED_EVENT = "ifc-file-downloaded";
 const MAIN_MENU_COMMAND = "main_clicked";
 const MAIN_MENU_TITLE = "IFC Checker";
 const MAIN_MENU_ICON_URL =
-  "https://www.tietomallintaja.fi/wp-content/uploads/2022/03/LOGO-Tekstilla-Musta-200-x-200.png";
+  "https://dorianlorenzato-max.github.io/trimble-ecna-extension-ifc-checker/bim_team.png";
 
 const CORE_API_BASE_URL_STATIC_CANDIDATES = [
   "https://app.connect.trimble.com/tc/api/2.0",
@@ -5775,3 +5775,4 @@ function initializePage() {
 }
 
 initializePage();
+
