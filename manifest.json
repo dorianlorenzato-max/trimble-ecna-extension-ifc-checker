@@ -3,5 +3,6 @@
   "title": "ECNA_IFC Checker",
   "url": "https://github.com/dorianlorenzato-max/trimble-ecna-extension-ifc-checker/app/index.html",
   "description": "Trimble Connect IFC content validation extension",
-  "enabled": false
+  "enabled": true
 }
+
